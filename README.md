@@ -3,7 +3,7 @@
 **A full-stack healthcare consultation and patient history management system**  
 Built with TypeScript · Express · Supabase · React · Vite · Tailwind CSS
 
-doctor-hub-app.netlify.app
+[Doctor Hub Live Link](https://doctor-hub-app.netlify.app)
 
 
 
