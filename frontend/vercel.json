@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "doctor-hub-api",
+      "src": "backend",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist",
+        "installCommand": "npm install"
+      }
+    },
+    {
+      "name": "doctor-hub-frontend",
+      "src": "frontend",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist",
+        "installCommand": "npm install"
+      }
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "http://doctor-hub-api.vercel.app/api/:path*" },
+    { "source": "/(.*)", "destination": "/frontend/$1" }
+  ]
+}
